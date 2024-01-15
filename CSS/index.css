@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+
+body{
+   font-family: 'Roboto', sans-serif;
+   text-align: justify;
+}
+
+
+/* tinav:titre de la navbar(camerresto) */
+.tinav{
+    font-size: 30px;
+}
+.lien:hover {
+    /* transition:  all ease-in-out 0.2s; */
+    background-color: #6c757d;
+    color: white;
+    border-radius: 0.5em;
+}
+
+#bulle{
+    background-color: red;
+    color: white;
+    width: 30px;
+    height: 25px;
+    font-size: 15px;
+    border-radius: 5em;
+    position: absolute;
+    display: flex;
+    top:0.15em;
+    right:0.5em ;
+    align-items: center;
+    justify-content: center;
+}
+i:hover{
+    color:rgb(50, 48, 48);
+}
+
+/* div du poulet frit titre,bouton , marge */
+.font{
+margin: 100px auto;
+}
+.pouletcarou{
+    font-size: 13px;
+}
+.titrecarou{
+    font-size: 4em;
+    font-weight: bold;
+}
+img{
+    object-fit: cover;
+ }
+/* .carousel-item{
+    height: auto;
+} */
+/* resposive de la store bulle */
+@media screen and (max-width:995px) {
+    .store{
+       position: absolute;
+       top:800px;
+
+    }
+    
+}
+/* les boutons de la carousel */
+.btn{
+    color: white;
+    border-color: rgb(10, 72, 10);
+    /* background-color: rgb(10, 72, 10); */
+}
+/* les cards (les hovers) */
+
+.card{
+box-shadow:  0px 2px 17px 0px; 
+ cursor: pointer;
+}
+.TEXTMEILLEURPLAT {
+   
+}
+/* image du tobafout */
+.tobafout{
+    width: 500px;
+    height: 470px;
+    border-radius: 50%;
+}
+.formulaireCommande{
+  box-shadow: 0px 2px 17px 0px;
+  border-radius: 0.5em;
+}
+/* reponse de la commande */
+.reponseCommande{
+    width: 50em;
+    color: green;
+    text-align: center;
+    border:0.1px solid rgba(4, 170, 109, 0.2);;
+    padding: 1.5em;
+    border-radius: 0.5em;
+    margin: auto;
+    background: rgba(4, 170, 109, 0.2);
+    display: none;
+}
+/* Footer : reseausocial*/
+/* footer{
+    height: 2em;
+} */
+.reseauSocial{
+    color: white;
+}
+.DG{
+    text-decoration: none;
+    color: black;
+}
+@media screen and (max-width:900px) {
+    .tobafout{
+       display: none;
+
+    }
+    
+}
+/* responsive des cards */
+@media screen and (max-width:600px) {
+    .card{
+      margin: 1em;
+    }
+    
+}

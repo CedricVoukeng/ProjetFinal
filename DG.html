@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="icon" href="image/logo.png">
+   <link rel="stylesheet" href="CSS/bootstrap.min.css">
+   <link rel="stylesheet" href="CSS/all.min.css">
+   <link rel="stylesheet" href="CSS/DG.css">
+   <title>Restaurant du cameroun</title>
+</head>
+<body>
+   <!-- les nav bar -->
+   <nav class="navbar navbar-expand-lg navbar-light bg-light  lh-lg mb-5">
+      <div class="container-fluid">
+        <a class="navbar-brand px-5 tinav" href="index.html"><i class="fa-solid fa-utensils" style="color: #919397;"></i><b>CamerResto.</b></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item px-3">
+              <a class="nav-link lh-lg lien " aria-current="page" href="index.html">Accueil</a>
+            </li>
+            <li class="nav-item px-3">
+              <a class="nav-link lh-lg lien" href="index.html#plats" >Plats</a>
+            </li>
+            <li class="nav-item px-3">
+              <a class="nav-link lh-lg lien" href="index.html#why">Pourquoi</a>
+            </li>
+            <li class="nav-item px-3">
+              <a class="nav-link lh-lg lien" href="index.html#menu">Menus</a>
+            </li>
+            <li class="nav-item px-3">
+              <a class="nav-link lh-lg lien  active link-light bg-secondary rounded-3" href="index.html#commande">Commandes</a>
+            </li>
+            <li class="nav-item px-3">
+              <a class="nav-link lh-lg lien" href="index.html#about">About</a>
+            </li>
+            <li class="nav-item px-3 mt-2 store ">
+              <a href="#"><i class="fa-solid fa-cart-plus fa-2xl" style="color:#7a7b7d;"></i>
+                <span class="bulle"><b>0</b></span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container-fluid bg-light mt-5">
+      <div class="container">
+       <div class="row">
+                <div  class="col-6 text-center "><img src="image/Pouletdg.jpg" alt="photo du Pouletdg" class="pouletdg">
+               </div>
+              
+              <div class=" col-xl-5 col-lg-6 col-md-6 col-sm-10 mt-3 mx-5"><strong class="fs-1">POULET DG</strong>
+                  <P>
+                     <i class="fa-regular fa-star" style="color: #ff0000;"></i> <i class="fa-regular fa-star" style="color: #ff0000;"></i> <i class="fa-regular fa-star" style="color: #ff0000;"></i> <i class="fa-regular fa-star" style="color: #ff0000;"></i>
+                     <i class="fa-regular fa-star" style="color: #ff0000;"></i><br>
+                        <span class="fs-3"> 10000 FCFA <del>20000 FCFA</del> </span> <map> promo</map><br>
+                        vous economisez <b>10000 FCFA</b>
+                  </p>
+                     <P>
+                        <i class="fa-solid fa-truck"></i> Livraison gratuit sous 1H <br>
+                        <i class="fa-solid fa-arrows-rotate"></i> Retour gratuit sous 30jours <br>
+                        <b>$</b> Payement a la livraison
+                     </P>
+                     <p>
+                      Quantité <br>
+                     <input type="number" class="dgquantity" value="1" id="quantite">     <b>TOTAL:</b><span class=" montant fs-2 fw-bold">10000</span> FCFA
+                     </p>
+                   
+                
+                    
+                    <button  type="button" class="payerMaintenan btn btn-secondary  py-3 px-2  border-secondary" id="paie"> Payement Maintenant</button> 
+    </div>
+  </div>
+  </div>
+  <div class="container-fluid">
+
+
+
+    <div class="payerMaintenant position-absolute top-50 start-50">
+    
+    <div class="titre-payerMaintenant">
+      <p>  Detail sur la carte <p>
+        <button id="fermerPayement">&times;</button>
+    </div>
+    
+    <div class="payementInfos">
+    
+        <p>VOUS ALLEZ PAYER AU TOTAL : <strong><span class="montan">10000</span></strong> FCFA</p>
+    
+    
+        <div class="lesInputs">
+            <div class="nomAdresse">
+                <input type="text"  class="infoPaiement" onkeyup="checkit()" id="inputName" placeholder="Entrez votre nom...">
+                <input type="text"  class="infoPaiement" onkeyup="checkit()" id="inputAdresse" placeholder="Entrez votre adresse...">
+           </div>
+            <div class="telMoyen">
+                <input type="tel"  class="infoPaiement" onkeyup="checkit()" id="inputPhone" placeholder="Entrez votre numero de telephone...">
+                <select name="moyenPayement" id="moyenPayement" onchange="checkit()">
+                    <option value="Mode de paiement">Mode de paiement</option>
+                    <option value="Orange money">Orange money</option>
+                    <option value="Mtn Mobile Money">Mtn Mobile Money</option>
+                    <option value="Express Union Mobile Money">Express Union Mobile Money</option>
+    
+                </select>
+        </div>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal" id="payer" disabled>
+          Payer
+        </button>
+        
+        <!-- The Modal -->
+        <div class="modal" id="myModal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+        
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+        
+              <!-- Modal body -->
+              <div class="modal-body">
+                MERCI D'AVOIR PASSER LA COMMANDE SUR CAMERRESTO!!!
+              </div>
+        
+          
+            </div>
+          </div>
+        </div>
+        </div>
+        
+    </div>
+    
+    
+    
+    
+    </div>
+    
+          
+    
+    
+    </div>
+        
+
+    <script src="JS/bootstrap.bundle.min.js"></script>
+    <script src="JS/all.min.js"></script>
+    <script src="JS/dg.js"></script>
+</body>
+</html>
